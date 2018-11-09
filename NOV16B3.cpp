@@ -1,38 +1,30 @@
-#include <iostream>
+#include<bits/stdc++.h>
 using namespace std;
-
-int main() 
+int main()
 {
-    int t,n,i,j,a[100009],c=0;
+    long long int t,n,i,a[100009],c;
     cin>>t;
     while(t--)
     {
         cin>>n;
-        for(i=0;i<n;i++)
+        for(i=1;i<n+1;i++)
         {
             cin>>a[i];
         }
         c=0;
-        for(i=0;i<n;i++)
+        for(i=1;i<n+1;i++)
         {
-            for(j=0;j<n;j++)
+            for(int j=i+1;j<n+1;j++)
             {
-                if(a[i]!=a[j+1]&&c==0)
+                
+                if(a[i]!=a[j]&&c==0)
                 {
-                    if(a[a[i]]=!a[a[j+1]])
+                    if(a[a[i]]==a[a[j]])
                     {
-                        continue;
-                    }
-                    else
-                    {
-                        c=1;
                         cout<<"Truly Happy"<<endl;
+                        c=1;
                         break;
                     }
-                }
-                else if(a[i]!=a[j+1]&&c==0)
-                {
-                    continue;    
                 }
             }
         }
@@ -41,5 +33,5 @@ int main()
             cout<<"Poor Chef"<<endl;
         }
     }
-	return 0;
+    return 0;
 }
