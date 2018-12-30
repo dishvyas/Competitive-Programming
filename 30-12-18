@@ -1,0 +1,31 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() 
+{
+	int y,b,r,i,d,e,f;
+	cin>>y>>b>>r;
+	i=min(y,b,r);
+	if(i==r)
+	{
+		d=r;
+		e=i-1;
+		f=i-2;
+		cout<<f<<e<<d<<endl;
+	}
+	else if(i==b)
+	{
+		d=b;
+		e=i+1;
+		f=i-1;
+		cout<<f<<d<<e<<endl;
+	}
+	else
+	{
+		d=i;
+		e=i+1;
+		f=i+2;
+		cout<<d<<e<<f<<endl;
+	}
+	return 0;
+}
