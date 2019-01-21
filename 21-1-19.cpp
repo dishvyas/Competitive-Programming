@@ -6,7 +6,8 @@ int main()
     cin>>n;
     for(i=0;i<n;i++)
         cin>>a[i];
-    long long int t=INT_MAX,cost=INT_MAX;
+    long long int t=INT_MAX;
+    long long int cost=INT_MAX;
     for(i=1;i<=100;i++)
     {
         int sum=0;
